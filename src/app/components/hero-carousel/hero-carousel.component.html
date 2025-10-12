@@ -1,34 +1,652 @@
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-  
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button *ngFor="let slide of slides; let i = index"
-            type="button"
-            [attr.data-bs-target]="'#heroCarousel'"
-            [attr.data-bs-slide-to]="i"
-            [class.active]="i === 0"
-            [attr.aria-label]="'Slide ' + (i + 1)">
+<!-- Hero Carousel Section -->
+<section id="hero-carousel-section">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button *ngFor="let slide of slides; let i = index"
+              type="button"
+              [attr.data-bs-target]="'#heroCarousel'"
+              [attr.data-bs-slide-to]="i"
+              [class.active]="i === 0"
+              [attr.aria-label]="'Slide ' + (i + 1)">
+      </button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === 0">
+        <img [src]="slide.image" class="d-block w-100" [alt]="slide.title" style="height:500px; object-fit:cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>{{ slide.title }}</h5>
+          <p>{{ slide.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#heroCarousel'" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#heroCarousel'" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
     </button>
   </div>
+</section>
 
-  <!-- Slides -->
-  <div class="carousel-inner">
-    <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === 0">
-      <img [src]="slide.image" class="d-block w-100" [alt]="slide.title" style="height:500px; object-fit:cover;">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{ slide.title }}</h5>
-        <p>{{ slide.subtitle }}</p>
+
+   <!-- Clearance Sale 70% -->
+
+<section class="container-fluid my-5 px-2">
+  <div class="text-center mb-4">
+    <h3>_____Clearance Sale Up to 70% _____</h3>
+  </div>
+
+  <!-- Carousel Wrapper -->
+  
+<div class="carousel-wrapper px-5" id="autoScrollCarousel">
+  <div class="carousel-inner2 d-flex" id="carouselInner">
+
+    <!-- WOMEN -->
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/new-women-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/WOMEN_SALE_a79370bf-be0a-4ac7-b513-19878a1302a4.jpg" class="card-img-top" alt="Women">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/new-women-sale" class="text-decoration-none text-dark fw-bold">WOMEN</a>
+      </div>
+    </div>
+
+    <!-- GIRLS -->
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/new-girls-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/GIRLS_SALE_be82d469-12dc-437d-b94c-adce11cbc6ed.jpg" class="card-img-top" alt="Girls">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/new-girls-sale" class="text-decoration-none text-dark fw-bold">GIRLS</a>
+      </div>
+    </div>
+
+    <!-- BOYS -->
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/boys-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Boys_Sale_eaab0cfc-8416-4538-ab6d-3a49d75f64ff.jpg?v=1752838725&width=400" class="card-img-top" alt="Boys">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/boys-sale" class="text-decoration-none text-dark fw-bold">BOYS</a>
+      </div>
+    </div>
+
+    <!-- ACCESSORIES -->
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/accessories-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/ACCESORIES_e24fce15-ba27-48f3-b967-a3f606186aaf.jpg" class="card-img-top" alt="Accessories">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/accessories-sale" class="text-decoration-none text-dark fw-bold">ACCESSORIES</a>
+      </div>
+    </div>
+
+    <!-- CO-ORDS -->
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-pret-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Co-ORD_Sale.jpg" class="card-img-top" alt="Co-Ords">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-pret-sale" class="text-decoration-none text-dark fw-bold">CO-ORDS</a>
+      </div>
+    </div>
+
+    <!-- WESTERN -->
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-western-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Western_Sale.jpg" class="card-img-top" alt="Western">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-western-sale" class="text-decoration-none text-dark fw-bold">WESTERN</a>
+      </div>
+    </div>
+
+    <!-- PANTS -->
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-pants-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/TROUSER_SALE.jpg" class="card-img-top" alt="Pants">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-pants-sale" class="text-decoration-none text-dark fw-bold">PANTS</a>
+      </div>
+    </div>
+
+    <!-- SLEEPWEAR -->
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-sleepwear-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Sleepwear_Sale.jpg" class="card-img-top" alt="Sleepwear">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-sleepwear-sale" class="text-decoration-none text-dark fw-bold">SLEEPWEAR</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- section3 cards -->
+<section class="collections-list container-fluid my-4">
+  <div class="row g-3 align-items-stretch">
+    <!-- Left Large Image -->
+    <div class="col-lg-6 col-md-12">
+      <a href="/collections/co-ord-sale" class="collection-card large">
+        <img
+          src="https://www.polkadots.pk/cdn/shop/files/Co_ORD_305f3312-8f19-41ea-b213-371aee313704.jpg?v=1758105089&width=1000"
+          alt="Co-Ord Set"
+          class="img-fluid"
+        />
+        <div class="overlay">
+          <h3>CO-ORD SET</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Right 3 Small Images -->
+    <div class="col-lg-6 col-md-12">
+      <div class="row g-3 h-100">
+        <div class="col-12 col-md-6">
+          <a href="/collections/boys-sale" class="collection-card">
+            <img
+              src="https://www.polkadots.pk/cdn/shop/files/BOYS_35d1dddb-37cd-4035-bad2-ea1365b30605.jpg?v=1758105090&width=600"
+              alt="Boys"
+              class="img-fluid"
+            />
+            <div class="overlay"><h4>BOYS</h4></div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <a href="/collections/pants-sale" class="collection-card">
+            <img
+              src="https://www.polkadots.pk/cdn/shop/files/PANTS_baff6254-cdb4-467b-8387-645397624e51.jpg?v=1758105289&width=600"
+              alt="Pants"
+              class="img-fluid"
+            />
+            <div class="overlay"><h4>PANTS</h4></div>
+          </a>
+        </div>
+
+        <div class="col-12 ">
+          <a href="/collections/girls-sale" class="collection-card ">
+            <img
+              src="https://www.polkadots.pk/cdn/shop/files/GIRLS_e29f2134-6351-43d2-90fc-0ae847aebac8.jpg?v=1758105374&width=1000"
+              alt="Girls"
+              class="img-fluid"
+            />
+            <div class="overlay"><h4>GIRLS</h4></div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#heroCarousel'" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#heroCarousel'" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<!-- section4 -->
+ <section class="collection-section ">
+  <div class="section-header">
+    <h3>_____Girls Ready to Wear_____</h3>
+  </div>
+
+  <!-- <div class="collection-carousel">
+    <div class="card " *ngFor="let item of girlsCollections">
+      <a [href]="item.link">
+        <img [src]="item.image" [alt]="item.title" />
+        <span>{{ item.title }}</span>
+      </a>
+       <div class="card-body p-2">
+          <h6 class="fw-semibold">PANTS</h6>
+        </div>
+    </div>
+  </div> -->
+  <div class="collection-carousel">
+
+    
+         <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="collections/girls-1-to-6-years">
+          <img src="https://www.polkadots.pk/cdn/shop/files/1-6_4d56c92e-96e2-490e-a5c2-076af7f7de66.jpg?v=1740048415&width=400"
+               class="card-img-top rounded" alt="1 - 6 YRS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">1 - 6 YRS</h6>
+        </div>
+      </div>
+ 
+         <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/girls-6-to-14-years">
+          <img src="https://www.polkadots.pk/cdn/shop/files/6-14_622ca803-56a3-48c5-a992-01533b839506.jpg?v=1740048485&width=400"
+               class="card-img-top rounded" alt="6 - 14 YRS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">6 - 14 YRS</h6>
+        </div>
+      </div>
+
+
+
+      <div class="card  border-0">
+        <a href="'/collections/girls-pants'">
+          <img src="https://www.polkadots.pk/cdn/shop/files/Girls_Pants.jpg?v=1729759123&width=400"
+               class="card-img-top rounded" alt="PANTS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">PANTS</h6>
+        </div>
+      </div>
+
+          <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/new-girls-sale">
+          <img src="https://www.polkadots.pk/cdn/shop/files/Girls_Sale_New.jpg?v=1729762377&width=400"
+               class="card-img-top rounded" alt="SALE">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">SALE</h6>
+        </div>
+      </div>
+
+
+      </div>
+</section>
+
+
+
+<!-- secton5 -->
+
+<section class="py-2 ">
+  <div class="container-fluid text-center ">
+    <h3 class="mb-4 fw-bold">Summer Ready to Wear</h3>
+
+    <div class="carousel-wrapper px-5" id="autoScrollCarousel">
+  <div class="carousel-inner2 d-flex" id="carouselInner">
+    <div class="d-flex overflow-auto gap-5 pb-3 px-5">
+      <!-- Category Card -->
+      <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/pret">
+          <img src="https://www.polkadots.pk/cdn/shop/files/PRET_47ded260-00b1-459a-96a2-0dcae0740831.jpg?v=1740046695"
+               class="card-img-top rounded" alt="PRET">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">PRET</h6>
+        </div>
+      </div>
+
+      <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/co-ord-set">
+          <img src="https://www.polkadots.pk/cdn/shop/files/Co_ORD_08d546f7-c599-4e62-80fe-9aa351c53431.jpg?v=1740046734"
+               class="card-img-top rounded" alt="CO-ORDS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">CO-ORDS</h6>
+        </div>
+      </div>
+
+      <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/girls">
+          <img src="https://www.polkadots.pk/cdn/shop/files/GIRLS_7dbbd437-63eb-40dd-b85a-fe49296327ee.jpg?v=1740046749"
+               class="card-img-top rounded" alt="GIRLS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">GIRLS</h6>
+        </div>
+      </div>
+
+      <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/boys">
+          <img src="https://www.polkadots.pk/cdn/shop/files/BOYS_ce0165a0-88b6-4b61-8ebd-c724818949ba.jpg?v=1740046914"
+               class="card-img-top rounded" alt="BOYS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">BOYS</h6>
+        </div>
+      </div>
+
+       <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/boys">
+          <img src="https://www.polkadots.pk/cdn/shop/files/FROCK_814dce40-d76a-4be0-b87c-9fe500969883.jpg?v=1740046788&width=400"
+               class="card-img-top rounded" alt="WESTERN">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">WESTERN</h6>
+        </div>
+      </div>
+
+       <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/boys">
+          <img src="https://www.polkadots.pk/cdn/shop/collections/accessories-626969.jpg?v=1732966106&width=400"
+               class="card-img-top rounded" alt="ACCESSORIES  ">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">ACCESSORIES</h6>
+        </div>
+      </div>
+
+       <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/boys">
+          <img src="https://www.polkadots.pk/cdn/shop/files/STOLES_064d9109-45ee-4007-8fc2-919289291582.jpg?v=1740046961&width=400"
+               class="card-img-top rounded" alt="STOLES">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">STOLES</h6>
+        </div>
+      </div>
+
+       <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/boys">
+          <img src="https://www.polkadots.pk/cdn/shop/files/SHELLY_9c52baac-5c7e-40d7-96d8-dce180976663.jpg?v=1740047054&width=400"
+               class="card-img-top rounded" alt="SHELLY">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">SHELLY</h6>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ECTION 6 -->
+<!-- WOMEN READY TO WEAR -->
+
+<section class="collection-section ">
+  <div class="section-header">
+    <h3>_____WOMEN  Ready to Wear_____</h3>
+  </div>
+
+  <!-- <div class="collection-carousel">
+    <div class="card " *ngFor="let item of girlsCollections">
+      <a [href]="item.link">
+        <img [src]="item.image" [alt]="item.title" />
+        <span>{{ item.title }}</span>
+      </a>
+       <div class="card-body p-2">
+          <h6 class="fw-semibold">PANTS</h6>
+        </div>
+    </div>
+  </div> -->
+  <div class="collection-carousel">
+
+    
+         <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="collections/girls-1-to-6-years">
+          <img src="https://www.polkadots.pk/cdn/shop/files/WEST_412b785e-e041-4b0d-8513-0b7d7d41260a.jpg?v=1740048234&width=400"
+               class="card-img-top rounded" alt="WESTERN">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">WESTERN</h6>
+        </div>
+      </div>
+ 
+         <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/girls-6-to-14-years">
+          <img src="https://www.polkadots.pk/cdn/shop/files/2piece_9d0ef5ff-a3b8-45f3-a91b-0b5011732da7.jpg?v=1740047902&width=400"
+               class="card-img-top rounded" alt="6 - 14 YRS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">2PIECE</h6>
+        </div>
+      </div>
+
+
+
+      <div class="card  border-0">
+        <a href="'/collections/girls-pants'">
+          <img src="https://www.polkadots.pk/cdn/shop/files/FROCK2_f4d626c7-5260-4fd3-b642-9b507e409784.jpg?v=1740048159&width=400"
+               class="card-img-top rounded" alt="FROCKS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">FROCKS</h6>
+        </div>
+      </div>
+
+          <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/new-girls-sale">
+          <img src="https://www.polkadots.pk/cdn/shop/files/CO_c4b23d57-4c01-468e-ba34-d699dd2204fc.jpg?v=1740048329&width=400"
+               class="card-img-top rounded" alt="SALE">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">CO-ORDER SET</h6>
+        </div>
+      </div>
+
+
+      </div>
+</section>
+
+<!-- SECTION 7-->
+
+<section class="collections-list container-fluid my-4">
+  <div class="row g-3 align-items-stretch">
+    <!-- Left Large Image -->
+    <div class="col-lg-6 col-md-12">
+      <a href="/collections/co-ord-sale" class="collection-card large">
+        <img
+          src="https://www.polkadots.pk/cdn/shop/files/WESTERN_e7b34248-0c32-4edd-8e25-4d823b06b994.jpg?v=1758105768&width=1000"
+          alt="Co-Ord Set"
+          class="img-fluid"
+        />
+        <div class="overlay">
+          <h3>WESTERN</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Right 3 Small Images -->
+    <div class="col-lg-6 col-md-12">
+      <div class="row g-3 h-100">
+        <div class="col-12 col-md-6">
+          <a href="/collections/boys-sale" class="collection-card">
+            <img
+              src="https://www.polkadots.pk/cdn/shop/files/ESSENTIAL_c0ba4a37-6a4d-4cdb-9079-4ab364acde72.jpg?v=1729763730&width=600"
+              alt="Boys"
+              class="img-fluid"
+            />
+            <div class="overlay"><h4>ESSTENTIAL</h4></div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <a href="/collections/pants-sale" class="collection-card">
+            <img
+              src="https://www.polkadots.pk/cdn/shop/files/FRAGNANCE_995db135-dd9f-4aa6-a719-3d9f161a204a.jpg?v=1729763738&width=600"
+              alt="Pants"
+              class="img-fluid"
+            />
+            <div class="overlay"><h4>FREDRANCES</h4></div>
+          </a>
+        </div>
+
+        <div class="col-12 ">
+          <a href="/collections/girls-sale" class="collection-card ">
+            <img
+              src="https://www.polkadots.pk/cdn/shop/files/2-PIECE_b982216a-0902-4f37-8552-dd6ccbc3a8cc.jpg?v=1758105867&width=1000"
+              alt="Girls"
+              class="img-fluid"
+            />
+            <div class="overlay"><h4>2-PIECE</h4></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8  ACCESSORIES -->
+
+<section class="container-fluid my-5 px-2">
+  <div class="text-center mb-4">
+    <h3>_____ACCESSORIES _____</h3>
+  </div>
+
+  
+<div class="carousel-wrapper px-5" id="autoScrollCarousel">
+  <div class="carousel-inner2 d-flex" id="carouselInner">
+
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/new-women-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Scrunchies_89622d21-1cf8-46ab-b611-ae398faf8585.jpg?v=1729762613&width=400" class="card-img-top" alt="Women">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/new-women-sale" class="text-decoration-none text-dark fw-bold">SCRUNCHIES</a>
+      </div>
+    </div>
+
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/new-girls-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Bag.jpg?v=1729762672&width=400" class="card-img-top" alt="Girls">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/new-girls-sale" class="text-decoration-none text-dark fw-bold">BOGS</a>
+      </div>
+    </div>
+
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/boys-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Belt_26d1d052-99a9-41ad-b74c-38978e0d6fd7.jpg?v=1729762613&width=400" class="card-img-top" alt="Boys">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/boys-sale" class="text-decoration-none text-dark fw-bold">BELTS</a>
+      </div>
+    </div>
+
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/accessories-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Sleeves_3daaa584-81a0-419c-b9c6-f62f281eaed9.jpg?v=1729763381&width=400" class="card-img-top" alt="Accessories">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/accessories-sale" class="text-decoration-none text-dark fw-bold">SLEEVES</a>
+      </div>
+    </div>
+
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-pret-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/JEWLLERY.jpg?v=1729762613&width=400" class="card-img-top" alt="Co-Ords">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-pret-sale" class="text-decoration-none text-dark fw-bold">JEWLLERY</a>
+      </div>
+    </div>
+
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-western-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/Hats.jpg?v=1729762613&width=400" class="card-img-top" alt="Western">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-western-sale" class="text-decoration-none text-dark fw-bold">HATS</a>
+      </div>
+    </div>
+
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-pants-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/collections/stoles-108627.jpg?v=1733291329&width=400" class="card-img-top" alt="Pants">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-pants-sale" class="text-decoration-none text-dark fw-bold">STOLES/SHAWL</a>
+      </div>
+    </div>
+
+    <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-sleepwear-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/SOCKS_f3f8c3e8-2f46-44a0-9854-d20c6ddf2745.jpg?v=1731669439&width=400" class="card-img-top" alt="Sleepwear">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-sleepwear-sale" class="text-decoration-none text-dark fw-bold">SOCKS</a>
+      </div>
+    </div>
+
+     <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-sleepwear-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/files/HAIR.jpg?v=1731669457&width=400" class="card-img-top" alt="Sleepwear">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-sleepwear-sale" class="text-decoration-none text-dark fw-bold">HAIR ACCESSORIES</a>
+      </div>
+    </div>
+
+     <div class="card text-center me-3" style="min-width: 220px; border: none;">
+      <a href="/collections/women-sleepwear-sale">
+        <img src="https://www.polkadots.pk/cdn/shop/collections/hijab-pins-785597.jpg?v=1733413044&width=400" class="card-img-top" alt="Sleepwear">
+      </a>
+      <div class="card-body p-2">
+        <a href="/collections/women-sleepwear-sale" class="text-decoration-none text-dark fw-bold">HIJAB PINS</a>
+      </div>
+    </div>
+
+  </div>
 </div>
+</section>
+
+<!-- Special offers -->
+
+<section class="collection-section ">
+  <div class="section-header">
+    <h3>_____Special offers _____</h3>
+  </div>
+
+  <!-- <div class="collection-carousel">
+    <div class="card " *ngFor="let item of girlsCollections">
+      <a [href]="item.link">
+        <img [src]="item.image" [alt]="item.title" />
+        <span>{{ item.title }}</span>
+      </a>
+       <div class="card-body p-2">
+          <h6 class="fw-semibold">PANTS</h6>
+        </div>
+    </div>
+  </div> -->
+  <div class="collection-carousel">
+
+    
+         <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="collections/girls-1-to-6-years">
+          <img src="https://www.polkadots.pk/cdn/shop/files/Women_Sale_e68acfd8-b256-4ea4-bbf1-04f641cf92ca.jpg?v=1729763273&width=400"
+               class="card-img-top rounded" alt="Women Sale">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">Women</h6>
+        </div>
+      </div>
+ 
+         <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/girls-6-to-14-years">
+          <img src="https://www.polkadots.pk/cdn/shop/files/Girls_Sale_New_b2da6df2-b385-4a9b-a56c-61a7c5b2030f.jpg?v=1729763272&width=400"
+               class="card-img-top rounded" alt="6 - 14 YRS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">GIRLS</h6>
+        </div>
+      </div>
+
+
+
+      <div class="card  border-0">
+        <a href="'/collections/girls-pants'">
+          <img src="https://www.polkadots.pk/cdn/shop/files/Boys_Sale.jpg?v=1729763272&width=400"
+               class="card-img-top rounded" alt="FROCKS">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">BOYS</h6>
+        </div>
+      </div>
+
+          <div class="card border-0" style="min-width: 180px; height: 230px;">
+        <a href="/collections/new-girls-sale">
+          <img src="https://www.polkadots.pk/cdn/shop/files/MINOR_FAULT.jpg?v=1729763272&width=400"
+               class="card-img-top rounded" alt="SALE">
+        </a>
+        <div class="card-body p-2">
+          <h6 class="fw-semibold">MINOR FAULTS</h6>
+        </div>
+      </div>
+
+
+      </div>
+</section>

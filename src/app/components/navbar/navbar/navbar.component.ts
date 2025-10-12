@@ -22,4 +22,28 @@ export class NavbarComponent {
       pink.classList.add('d-none');
     }
   }
+
+  categories = [
+  {
+    name: 'WESTERN',
+    subcategories: ['Tops', 'Dresses', 'Pants', 'Skirts', 'Jumpsuits']
+  },
+  {
+    name: 'GIRLS',
+    subcategories: ['Frocks', 'Jeans', 'T-Shirts', 'Accessories']
+  },
+  {
+    name: 'BOYS',
+    subcategories: ['Shirts', 'Shorts', 'Denim', 'Jackets']
+  },
+  {
+    name: 'ACCESSORIES',
+    subcategories: ['Bags', 'Jewelry', 'Belts', 'Hats']
+  },
+  {
+    name: 'SALE',
+    subcategories: ['Up to 50% Off', 'Clearance Items']
+  }
+];
+
 }
