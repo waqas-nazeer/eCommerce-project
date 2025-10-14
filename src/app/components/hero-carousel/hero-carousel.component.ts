@@ -9,10 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './hero-carousel.component.html',
   styleUrls: ['./hero-carousel.component.css']
 })
-export class HeroCarouselComponent implements OnInit, AfterViewInit{
-    ngAfterViewInit(): void {
-      throw new Error('Method not implemented.');
-    }
+export class HeroCarouselComponent implements OnInit{
 
 
     slides = [
