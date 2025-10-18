@@ -108,7 +108,7 @@
 }
 
 /* // Responsive adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .carousel-wrapper {
     padding: 0 15px;
   }
@@ -129,15 +129,22 @@
   .mega-menu .container {
     max-width: 100%;
   }
-}
+} */
 
 @media (min-width: 992px) {
+  /* Show mega menu on hover */
   .navbar .dropdown:hover > .dropdown-menu {
     display: block;
     visibility: visible;
     opacity: 1;
+    left: 0;
+    right: 0;
+    width: 100vw; /* full browser width */
+    margin: 0;
+    border-radius: 0;
   }
 
+  /* Hide by default */
   .navbar .dropdown-menu {
     display: none;
     visibility: hidden;
@@ -145,7 +152,10 @@
     transition: opacity 0.3s ease;
   }
 
+  /* Optional: hover color for link */
   .navbar .dropdown:hover > .nav-link {
     color: #e83e8c;
   }
+
+ 
 }

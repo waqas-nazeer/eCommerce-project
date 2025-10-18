@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CardcomponentComponent } from '../../card/cardcomponent/cardcomponent.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink,CommonModule],
+  imports: [RouterLink,CommonModule,CardcomponentComponent],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
@@ -26,27 +27,5 @@ export class NavbarComponent {
     }
   }
 
-  categories = [
-  {
-    name: 'WESTERN',
-    subcategories: ['Tops', 'Dresses', 'Pants', 'Skirts', 'Jumpsuits']
-  },
-  {
-    name: 'GIRLS',
-    subcategories: ['Frocks', 'Jeans', 'T-Shirts', 'Accessories']
-  },
-  {
-    name: 'BOYS',
-    subcategories: ['Shirts', 'Shorts', 'Denim', 'Jackets']
-  },
-  {
-    name: 'ACCESSORIES',
-    subcategories: ['Bags', 'Jewelry', 'Belts', 'Hats']
-  },
-  {
-    name: 'SALE',
-    subcategories: ['Up to 50% Off', 'Clearance Items']
-  }
-];
 
 }

@@ -1,0 +1,38 @@
+ .custom-navbar-border {
+  border-bottom: 2px solid #e0e0e0; /* Light gray line */
+}
+
+ 
+ 
+ .product-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  .main-img {
+    transition: opacity 0.4s ease;
+  }
+
+  .hover-img {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover {
+    .main-img {
+      opacity: 0;
+    }
+    .hover-img {
+      opacity: 1;
+    }
+    .quick-view-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .quick-view-btn {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+}

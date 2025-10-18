@@ -1,0 +1,9 @@
+
+<app-hero-carousel></app-hero-carousel>
+
+<ng-container *ngIf="showHero">
+    <app-hero-carousel></app-hero-carousel>
+</ng-container>
+<ng-container *ngIf="!showHero">
+<app-cardcomponent></app-cardcomponent>
+</ng-container>
