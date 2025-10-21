@@ -36,3 +36,51 @@
     transition: all 0.3s ease;
   }
 }
+
+
+/* inner container behaves like flex row */
+.carousel-inner2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /* stays centered if items added/removed */
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* each card styled as circle */
+.carousel-inner2 .card {
+  flex: 0 0 auto;
+  text-align: center;
+  border: none;
+  border-radius: 50%; /* make it round */
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner2 .card:hover {
+  transform: translateY(-5px);
+}
+
+/* image inside card */
+.carousel-inner2 .card-img-top {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%; /* circular image */
+  transition: all 0.3s ease;
+}
+
+/* .carousel-inner2 .card-body {
+  padding: 5px 0;
+} */
+
+.carousel-inner2 a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.carousel-inner2 a:hover {
+  color: #e83e8c;
+}
