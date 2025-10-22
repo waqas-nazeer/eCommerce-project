@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { AddToCartComponent } from '../../add-to-cart/add-to-cart.component';
 
 @Component({
   selector: 'app-cardcomponent',
   standalone: true,
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule,RouterLink,AddToCartComponent],
   templateUrl: './cardcomponent.component.html',
   styleUrls: ['./cardcomponent.component.css']
 })
@@ -15,8 +16,7 @@ export class CardcomponentComponent implements OnInit {
 
 category = '';
 products: any[]=[];
-
-constructor(private route : ActivatedRoute){}
+constructor(private route : ActivatedRoute, private router:Router){}
 
 
  ngOnInit(): void {
@@ -37,7 +37,7 @@ constructor(private route : ActivatedRoute){}
       price: 4950,
       mainImage: '//www.polkadots.pk/cdn/shop/files/Orange_fbcfdd42-01f2-4407-a1cb-58e35d78d4f1.jpg?v=1756901189',
       hoverImage: '//www.polkadots.pk/cdn/shop/files/Hanger_bc748f5e-95fc-4ddd-83e8-b7dd2f804112.jpg?v=1756901190',
-      link: '#'
+      link: '/addToCart'
     },
     {
       title: '3 PIECE SUIT',
@@ -427,7 +427,7 @@ constructor(private route : ActivatedRoute){}
       price: 4950,
       mainImage: '//www.polkadots.pk/cdn/shop/files/Orange_fbcfdd42-01f2-4407-a1cb-58e35d78d4f1.jpg?v=1756901189',
       hoverImage: '//www.polkadots.pk/cdn/shop/files/Hanger_bc748f5e-95fc-4ddd-83e8-b7dd2f804112.jpg?v=1756901190',
-      link: '#'
+      link: '/addToCart'
     },
     {
       title: '3 PIECE SUIT',
@@ -457,5 +457,8 @@ constructor(private route : ActivatedRoute){}
 
 
  }
+
+ 
+
 
 }

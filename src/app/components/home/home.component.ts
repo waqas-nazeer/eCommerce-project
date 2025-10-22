@@ -4,6 +4,7 @@ import { filter, Subscription } from 'rxjs';
 import { CardcomponentComponent } from '../card/cardcomponent/cardcomponent.component';
 import { HeroCarouselComponent } from '../hero-carousel/hero-carousel.component';
 import { CommonModule, NgIf } from '@angular/common';
+import { AddToCartComponent } from '../add-to-cart/add-to-cart.component';
 
 @Component({
   selector: 'app-home',
