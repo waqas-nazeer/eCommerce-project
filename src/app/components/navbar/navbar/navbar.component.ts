@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CardcomponentComponent } from '../../card/cardcomponent/cardcomponent.component';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,10 +11,16 @@ import { CardcomponentComponent } from '../../card/cardcomponent/cardcomponent.c
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   cartCount: number = 0;
   showWomenMegaMenu: boolean = false; 
 
+  constructor(private cartService:CartService){}
+  ngOnInit(): void {
+    this.cartService.cartCount$.subscribe( count => {
+      this.cartCount = count;
+    });
+  }
   // Toggle track order image on hover
   toggleTrackHover(event: any, showPink: boolean) {
     const black = event.target.parentElement.querySelector('.track-black');
