@@ -6,7 +6,7 @@ import { AddToCartComponent } from '../../add-to-cart/add-to-cart.component';
 @Component({
   selector: 'app-cardcomponent',
   standalone: true,
-  imports: [CommonModule,RouterLink,AddToCartComponent],
+  imports: [CommonModule,RouterLink],
   templateUrl: './cardcomponent.component.html',
   styleUrls: ['./cardcomponent.component.css']
 })
@@ -44,28 +44,28 @@ constructor(private route : ActivatedRoute, private router:Router){}
       price: 6250,
       mainImage: 'https://www.polkadots.pk/cdn/shop/files/L-Grey_c66b5ceb-1cfa-423a-aceb-8650884cad7b.jpg?v=1759492198&width=900',
       hoverImage: 'https://www.polkadots.pk/cdn/shop/files/Hanger_c4fccf4c-0ff8-4a31-a5b0-c4821c048251.jpg?v=1759492224&width=600',
-      link: '#'
+      link: '/addToCart'
     },
  {
       title: '3 PIECE SUIT',
       price: 6250,
       mainImage: 'https://www.polkadots.pk/cdn/shop/files/L-Grey_c66b5ceb-1cfa-423a-aceb-8650884cad7b.jpg?v=1759492198&width=900',
       hoverImage: 'https://www.polkadots.pk/cdn/shop/files/Hanger_c4fccf4c-0ff8-4a31-a5b0-c4821c048251.jpg?v=1759492224&width=600',
-      link: '#'
+      link: '/addToCart'
     },
   {
       title: '3 PIECE SUIT',
       price: 6250,
       mainImage: 'https://www.polkadots.pk/cdn/shop/files/L-Grey_c66b5ceb-1cfa-423a-aceb-8650884cad7b.jpg?v=1759492198&width=900',
       hoverImage: 'https://www.polkadots.pk/cdn/shop/files/Hanger_c4fccf4c-0ff8-4a31-a5b0-c4821c048251.jpg?v=1759492224&width=600',
-      link: '#'
+      link: '/addToCart'
     },
    {
       title: '3 PIECE SUIT',
       price: 6250,
       mainImage: 'https://www.polkadots.pk/cdn/shop/files/L-Grey_c66b5ceb-1cfa-423a-aceb-8650884cad7b.jpg?v=1759492198&width=900',
       hoverImage: 'https://www.polkadots.pk/cdn/shop/files/Hanger_c4fccf4c-0ff8-4a31-a5b0-c4821c048251.jpg?v=1759492224&width=600',
-      link: '#'
+      link: '/addToCart' 
     },
       {
       title: '3 PIECE SUIT',

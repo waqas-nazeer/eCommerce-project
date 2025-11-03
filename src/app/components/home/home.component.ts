@@ -6,7 +6,7 @@ import { CommonModule, NgIf } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,CardcomponentComponent,HeroCarouselComponent,NgIf],
+  imports: [CommonModule,CardcomponentComponent,HeroCarouselComponent,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

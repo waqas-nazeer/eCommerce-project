@@ -1,0 +1,19 @@
+.table img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.table img:hover {
+  transform: scale(1.05);
+}
+
+.btn-outline-secondary {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

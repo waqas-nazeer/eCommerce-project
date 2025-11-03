@@ -1,33 +1,63 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-shopping-cart',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './shopping-cart.component.html',
-  styleUrl: './shopping-cart.component.css'
+  styleUrls: ['./shopping-cart.component.css']
 })
-export class ShoppingCartComponent {
+export class ShoppingCartComponent implements OnInit {
 
-  cartItems:any[]=[];
-  subTotal = 0;
+  cartItems: any[] = [];
+  subtotal = 0;
 
-  constructor(private cartService:CartService){}
+  constructor(private cartService: CartService) {}
 
-  loadCart(){
-    this.cartItems = this.cartService.getItems();
+  ngOnInit() {
+    this.loadCart();
   }
-increaseQynatity(item: any){
-item.quantity++;
-}
 
-decreaseQuantity(item: any){
-  item.quantity--;
-}
+  loadCart() {
+    this.cartItems = this.cartService.getItems();
+    this.calculateSubtotal();
+  }
 
-removeItem(){
-  this.cartItems.splice(index, 1)
-}
+  increaseQuantity(item: any) {
+    item.quantity++;
+    this.updateCart();
+  }
 
+  decreaseQuantity(item: any) {
+    if (item.quantity > 1) {
+      item.quantity--;
+      this.updateCart();
+    }
+  }
+
+  removeItem(index: number) {
+    this.cartItems.splice(index, 1);
+    this.updateCart();
+  }
+
+  updateCart() {
+    // Update subtotal
+    this.calculateSubtotal();
+
+    // Update total count in the service
+    const totalQuantity = this.cartItems.reduce((acc, i) => acc + i.quantity, 0);
+    this.cartService['cartCount'].next(totalQuantity);
+  }
+
+  calculateSubtotal() {
+    this.subtotal = this.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  }
+
+  clearCart() {
+    this.cartService.clearCart();
+    this.loadCart();
+  }
 }

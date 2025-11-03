@@ -1,1 +1,79 @@
-<p>shopping-cart works!</p>
+<div class="container-fluid py-5">
+  <h3 class="bg-danger fw-bold  text-center">Your Shopping Cart</h3>
+
+  <div *ngIf="cartItems.length === 0" class="text-center text-muted py-5">
+    <img src="assets/images/empty-cart.png" width="120" class="mb-3">
+    <h5>Your cart is empty</h5>
+    <p>Start shopping to add your favorite products!</p>
+    <a routerLink="/" class="btn btn-dark rounded-pill px-4">Continue Shopping</a>
+  </div>
+
+  <div *ngIf="cartItems.length > 0" class="table-responsive">
+    <table class="table align-middle">
+      <thead class="table-light text-center">
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th style="width:150px;">Quantity</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems; let i = index" class="text-center">
+          <td class="text-start">
+            <div class="d-flex align-items-center">
+              <img [src]="item.image || 'https://via.placeholder.com/60'"
+                   width="60"
+                   class="rounded me-3 shadow-sm"
+                   alt="{{item.name}}">
+              <div>
+                <div class="fw-semibold">{{ item.name }}</div>
+                <small class="text-muted">
+                  {{ item.color }} | {{ item.size }} | {{ item.material }}
+                </small>
+              </div>
+            </div>
+          </td>
+
+          <td>Rs. {{ item.price | number }}</td>
+
+          <td>
+            <div class="d-flex justify-content-center align-items-center">
+              <button class="btn btn-outline-secondary btn-sm" (click)="decreaseQuantity(item)">−</button>
+              <input type="number"
+                     class="form-control form-control-sm text-center mx-2"
+                     [(ngModel)]="item.quantity"
+                     min="1"
+                     (change)="updateCart()"
+                     style="width:60px;">
+              <button class="btn btn-outline-secondary btn-sm" (click)="increaseQuantity(item)">+</button>
+            </div>
+          </td>
+
+          <td>Rs. {{ (item.price * item.quantity) | number }}</td>
+
+          <td>
+            <button class="btn btn-outline-danger btn-sm" (click)="removeItem(i)">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Subtotal Section -->
+    <div class="d-flex justify-content-end mt-4">
+      <div class="border p-4 rounded shadow-sm bg-light" style="min-width: 300px;">
+        <h5 class="fw-bold d-flex justify-content-between">
+          <span>Subtotal:</span>
+          <span>Rs. {{ subtotal | number }}</span>
+        </h5>
+        <button class="btn btn-dark w-100 mt-3 rounded-pill">Proceed to Checkout</button>
+        <button class="btn btn-outline-danger w-100 mt-2 rounded-pill" (click)="clearCart()">
+          Clear Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
